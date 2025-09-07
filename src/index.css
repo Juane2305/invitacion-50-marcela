@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+
+@theme{
+  --font-brushNames: 'Marck Script', cursive;
+  --font-eleganteText: 'Noto Serif Display', serif;
+}
