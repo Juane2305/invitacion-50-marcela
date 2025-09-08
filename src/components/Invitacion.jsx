@@ -1,4 +1,3 @@
-
 import PropTypes from "prop-types";
 
 import cancion from '../assets/song.mp3'
@@ -8,7 +7,6 @@ import Footer from "../components/Footer";
 import TextoFinal from "../components/TextoFinal";
 import LugaresLineal from "../components/LugaresLineal";
 import GalleryElegante from "../components/GalleryElegante";
-import DressCodeVerona from "../components/dressCodeVerona";
 
 import hojasDecoracionIzq from "../assets/verona/hojasDecoracionIzq.svg";
 import hojasDecoracionDer from "../assets/verona/hojasDecoracionDer.svg";
@@ -60,12 +58,10 @@ const Invitacion = () => {
           className="
             absolute 
             top-0 
-            -left-28
+            -left-10
             pointer-events-none 
-            w-[29rem]  
-            md:w-[34rem]       
-            lg:w-[52rem] 
-            lg:-left-60  
+            w-[15rem]  
+            md:w-[20rem]       
             transition-all
             duration-300
           "
@@ -77,49 +73,47 @@ const Invitacion = () => {
           className="
             absolute 
             bottom-0 
-            -right-28
+            -right-10
             pointer-events-none 
-            w-[29rem] 
-            md:w-[34rem]
-            lg:w-[52rem]
-            lg:-right-60
+            w-[15rem] 
+            md:w-[20rem]
             transition-all
             duration-300
           "
         />
 
-        <h1 className="text-6xl md:text-8xl font-brushNames text-[#4b5147] z-10 italic">
+        <h1 className="text-6xl md:text-8xl font-brushNames text-[#2c003e] z-10 italic mb-0">
             ¡Mis 50 años!
         </h1>
 
         <img
           src={decoracionBajoNombres}
           alt="Decoración bajo nombres"
-          className="w-48 sm:w-72 md:w-[21rem] h-auto"
+          className="w-48 sm:w-72 md:w-[21rem] block mb-0"
         />
 
-        <div className="flex items-center justify-center py-2 px-4 bg-[#c8d4c1] mt-2">
-          <p className="font-bold text-[#4b5147] text-lg">13 / 09 / 2025</p>
+        <div className="flex items-center justify-center py-2 px-4 bg-[#ecbaf9]">
+          <p className="font-bold text-[#2c003e] text-lg">13 / 09 / 2025</p>
         </div>
       </div>
 
       <div>
           <section
             id="contador"
-            className="bg-white py-10 border-y-4 border-[#9eba8a]"
+            className="bg-white py-10 border-y-4 border-[#b26cc4]"
           >
             <CountdownCircles
               targetDate={targetDate}
               containerClasses="my-8"
               backgroundColor="#e5e7eb"
-              progressColor="#9eba8a"
+              progressColor="#b26cc4"
               textColor="black"
               valueClassName="text-3xl font-light"
               labelClassName="text-base font-thin"
             />
           </section>
 
-        <div className="bg-[#69795d]">
+        <div className="bg-[#b26cc4]">
           <div data-aos="fade-up">
             <LugaresLineal
               iglesia= "Nombre iglesia"
@@ -129,13 +123,13 @@ const Invitacion = () => {
               hora_fiesta= "hora"
               link_ceremonia = "link"
               link_fiesta = "link"
-              borderColor="border-[#a2b891]"
-              buttonStyle="border-[#a2b891] text-lg"
+              borderColor="border-[#ecbaf9]"
+              buttonStyle="border-[#ecbaf9] text-lg"
             />
           </div>
         </div>
 
-          <div className="relative py-10 border-b-4 border-[#9eba8a] bg-white">
+          <div className="relative py-10 border-b-4 border-[#b26cc4] bg-white">
             <img
               src={decoracionImagenes}
               alt="Decoración lateral"
@@ -151,14 +145,14 @@ const Invitacion = () => {
               className="hidden md:block absolute -right-36 top-1/2 transform -translate-y-1/2 pointer-events-none"
               style={{ width: "30rem" }}
             />
-            <GalleryElegante textStyle="text-[#4b5147]" buttonStyle="bg-[#9eba8a]" images= {images}/>
+            <GalleryElegante textStyle="text-[#4b5147]" buttonStyle="bg-[#ecbaf9]" images= {images}/>
           </div>
 
           <Asistencia
             linkAsistencia="https://docs.google.com/forms/d/e/1FAIpQLSdUnttwYghANWC-jLWXjdLK42PzjjCpUXD2q6dCTfQ8mtwiRQ/viewform?usp=header"
-            clase="py-10 bg-white bg-fixed border-b-4 border-[#9eba8a]"
-            claseTitle="text-[#9eba8a]"
-            claseButton="border-2 border-[#9eba8a] font-semibold hover:bg-[#9eba8a]  text-gray-700 hover:text-white rounded-full"
+            clase="py-10 bg-white bg-fixed border-b-4 border-[#b26cc4]"
+            claseTitle="text-[#b26cc4]"
+            claseButton="border-2 border-[#b26cc4] font-semibold hover:bg-[#b26cc4]  text-gray-700 hover:text-white rounded-full"
           />
 
         <div className="font-eleganteTitle text-2xl bg-white">
