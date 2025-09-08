@@ -1,17 +1,35 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 
 
 const GalleryElegante = ({ buttonStyle = "" , images}) => {
   const [current, setCurrent] = useState(0);
   const touchStartX = useRef(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener ? mq.addEventListener("change", update) : mq.addListener(update);
+    return () => {
+      mq.removeEventListener ? mq.removeEventListener("change", update) : mq.removeListener(update);
+    };
+  }, []);
+
+  const renderedImages = isDesktop ? images.filter((it) => it.index !== 4) : images;
+
+  useEffect(() => {
+    if (current >= renderedImages.length) {
+      setCurrent(0);
+    }
+  }, [renderedImages.length]);
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setCurrent((prev) => (prev === 0 ? renderedImages.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setCurrent((prev) => (prev === renderedImages.length - 1 ? 0 : prev + 1));
   };
 
   const handleTouchStart = (e) => {
@@ -41,7 +59,7 @@ const GalleryElegante = ({ buttonStyle = "" , images}) => {
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        {images.map((item, index) => (
+        {renderedImages.map((item, index) => (
           <div
             key={item.index}
             className={`

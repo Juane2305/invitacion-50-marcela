@@ -24,7 +24,7 @@ const Invitacion = () => {
         },
         {
           index: 4,
-          img: "https://res.cloudinary.com/dfschbyq2/image/upload/c_pad,ar_9:16/v1757253469/2d46ccc6-6dc1-4e2e-888b-b16ba3a08288_ikioqk.jpg",
+          img: "https://res.cloudinary.com/dfschbyq2/image/upload/v1757363963/2d46ccc6-6dc1-4e2e-888b-b16ba3a08288_2_zjyq8n.jpg",
         },
         {
             index: 1,
